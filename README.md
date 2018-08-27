@@ -10,10 +10,7 @@ This library serves as a wrapper around that streaming API while preserving the 
 
 # Important! Read first!
 
-This README is for the newly minted 1.0.0 version. You may be looking for the old version's documentation or code, which you can still find in [the 0.2.x
-branch](https://github.com/monitorjbl/excel-streaming-reader/tree/0.2.x). The 0.2.x branch will have important bugfixes backported to it going forward, but
-new features will not be (apart from any exceptional circumstances).
-
+This README is for the newly minted 1.0.0 version. 
 The 1.x versions include a new API that allows users to interact with POI `Workbooks` and `Sheets` in a streaming fashion. The new API is mostly backwards
 compatible with the 0.2 version, with a slight difference:
 
@@ -53,8 +50,8 @@ To use it, add this to your POM:
 ```
 <dependencies>
   <dependency>
-    <groupId>com.monitorjbl</groupId>
-    <artifactId>xlsx-streamer</artifactId>
+    <groupId>com.ptalele</groupId>
+    <artifactId>xlsxstreamer</artifactId>
     <version>1.2.0</version>
   </dependency>
 </dependencies>  
@@ -65,7 +62,7 @@ To use it, add this to your POM:
 This library is very specific in how it is meant to be used. You should initialize it like so:
 
 ```java
-import com.monitorjbl.xlsx.StreamingReader;
+import com.ptalele.xlsx.StreamingReader;
 
 InputStream is = new FileInputStream(new File("/path/to/workbook.xlsx"));
 Workbook workbook = StreamingReader.builder()
@@ -136,8 +133,8 @@ This library uses SLF4j logging. This is a rare use case, but you can plug in yo
 ```
 <dependencies>
   <dependency>
-    <groupId>com.monitorjbl</groupId>
-    <artifactId>xlsx-streamer</artifactId>
+    <groupId>com.ptalele</groupId>
+    <artifactId>xlsxstreamer</artifactId>
     <version>1.2.0</version>
   </dependency>
   <dependency>
@@ -161,7 +158,7 @@ log4j.appender.A1=org.apache.log4j.ConsoleAppender
 log4j.appender.A1.layout=org.apache.log4j.PatternLayout
 log4j.appender.A1.layout.ConversionPattern=%d{ISO8601} [%c] %p: %m%n
 
-log4j.category.com.monitorjbl=DEBUG
+log4j.category.com.ptalele=DEBUG
 ```
 
 # Implementation Details
